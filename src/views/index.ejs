@@ -1,13 +1,31 @@
-<%- include('includes/head'); %>
+<%- include('includes/head.ejs')%> <%- include('includes/nav.ejs')%>
 
-<section class="container">
-  <h1>Lorem, ipsum dolor sit amet</h1>
-  <form method="POST" action="/">
-    <!-- <input type="hidden" name="_csrf" value="<%= csrfToken %>" /> -->
-    <label for="">Cliente</label>
-    <input type="text" />
-    <button>Submit</button>
-  </form>
-</section>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Agenda</h1>
+      <p class="text-center lead">Seus contato estão abaixo</p>
 
-<%- include('includes/footer'); %>
+      <div class="row">
+        <div class="col my-3">
+          <div class="alert alert-danger">Um erro qualquer</div>
+        </div>
+      </div>
+
+      <div class="responsive-table">
+        <table class="table my-3">
+          <tr>
+            <td>Luiz</td>
+            <td>Otávio</td>
+            <td>236545756756</td>
+            <td>asdosdasd@sdasasda.com</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer.ejs')%>
