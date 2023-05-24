@@ -11,5 +11,9 @@ route.get("/", homeController.index);
 route.get("/login/index", loginController.index);
 // Criando novo usuário
 route.post("/login/register", loginController.register);
+// Criando rota pós login
+route.post("/login/login", loginController.login);
+// Criando rota de logout
+route.get("/login/logout", loginController.logout);
 
 module.exports = route;
