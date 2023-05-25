@@ -1,0 +1,72 @@
+<%- include('includes/head.ejs')%> <%- include('includes/nav.ejs')%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Contato</h1>
+      <p class="text-center lead">Crie ou edite seu contato abaixo</p>
+
+      <%- include('includes/messages')%>
+
+      <form action="/contato/register" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            aria-describedby="nomeHelp"
+            placeholder="Nome do contato"
+            name="nome"
+            value="<%= contato.nome %>"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="sobrenome">Sobrenome</label>
+          <input
+            type="text"
+            class="form-control"
+            id="sobrenome"
+            aria-describedby="sobrenomeHelp"
+            placeholder="Sobrenome do contato"
+            name="sobrenome"
+            value="<%= contato.sobrenome %>"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="E-mail do contato"
+            name="email"
+            value="<%= contato.email %>"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">telefone</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="telefone"
+            aria-describedby="telefoneHelp"
+            placeholder="Telefone do contato"
+            name="telefone"
+            value="<%= contato.telefone %>"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer.ejs')%>
