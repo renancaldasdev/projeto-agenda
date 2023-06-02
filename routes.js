@@ -25,5 +25,6 @@ route.post("/contato/register", loginRequired, contatoController.register);
 // Criando rota de edição de usuários
 route.get("/contato/index/:id", loginRequired, contatoController.editIndex);
 route.post("/contato/edit/:id", loginRequired, contatoController.edit);
+route.get("/contato/delete:id", loginRequired, contatoController.delete);
 
 module.exports = route;
